@@ -46,7 +46,7 @@ ylabel('beta = 1/T');
 title('Annealing Schedule (linear)');
 
 for ii = 1:1:num_samples
-    for jj = 2:1:num_pbits
+    for jj = 1:1:num_pbits
         I_jj = beta(ii)*(J(jj,:)*m+h(jj));   % notice that every time beta is changing
         m(jj) = sign(tanh(I_jj)-2*rand+1);
     end

@@ -38,7 +38,7 @@ min_energy = 100;
 num_samples = 10000;
 
 for ii = 1:1:num_samples
-    for jj = 2:1:num_pbits
+    for jj = 1:1:num_pbits
         I_jj = beta*(J(jj,:)*m+h(jj));
         m(jj) = sign(tanh(I_jj)-2*rand+1);
     end
